@@ -1,0 +1,40 @@
+[data-avatar] {
+  --avatar--size: 2rem;
+
+  box-sizing: border-box;
+  width: var(--avatar--size);
+  height: var(--avatar--size);
+  object-fit: cover;
+  border: 5px solid tomato;
+}
+
+/* [data-avatar~="size:xs"] {
+  --avatar--size: 20px;
+}
+
+[data-avatar~="size:sm"] {
+  --avatar--size: 24px;
+}
+
+[data-avatar~="size:md"] {
+  --avatar--size: 32px;
+}
+
+[data-avatar~="size:lg"] {
+  --avatar--size: 40px;
+} */
+
+/* [data-avatar] {
+  --avatar--size: 2rem;
+  --avatar--border: 0 solid white;
+  --avatar--opacity: 1;
+
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 50%;
+  border: var(--avatar--border);
+  opacity: var(--avatar--opacity);
+  width: var(--avatar--size);
+  height: var(--avatar--size);
+  object-fit: cover;
+} */

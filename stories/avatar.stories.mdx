@@ -1,0 +1,28 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+import "../colorway.css";
+
+<Meta title="Avatar" />
+
+# Avatar
+
+<Canvas>
+  <Story name="default">
+    <img
+      data-avatar
+      src="https://placekitten.com/200/300"
+      alt="a cute kitten"
+    />
+  </Story>
+</Canvas>
+
+Other stuff
+
+<Story name="avatar--size">
+  <img
+    data-avatar
+    style={{ "--avatar--size": "10rem" }}
+    src="https://placekitten.com/200/300"
+    alt="a cute kitten"
+  />
+</Story>
