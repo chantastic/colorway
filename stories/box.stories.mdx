@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+import "../colorway.css";
+
+<Meta title="Box" />
+
+## Box
+
+<Canvas>
+  <Story name="data-box">
+    <div
+      style={{
+        backgroundColor: "orange",
+        padding: ".1px" /* force visible margin */,
+      }}
+    >
+      <div
+        data-box
+        style={{
+          backgroundColor: "lightgreen",
+          "--box--box-sizing": "content-box",
+          "--box--margin": "1rem",
+          "--box--border": "1rem solid lightyellow",
+          "--box--padding": "1rem",
+        }}
+      >
+        <div style={{ backgroundColor: "lightblue" }}>test</div>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+## Notes
+
+- can't `unset` or `inherit` via Custom Properties
+- decided to have `data-box` be loaded last for overrides
+
+## TODO:
+
+- can we fix border-property overrides with boolean custom properties?
+  - https://css-tricks.com/logical-operations-with-css-variables/

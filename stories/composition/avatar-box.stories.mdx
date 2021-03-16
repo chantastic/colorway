@@ -1,0 +1,25 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+import "../../colorway.css";
+
+<Meta title="Composition" />
+
+# Composition
+
+<Canvas>
+  <Story name="avatar:box">
+    <img
+      data-avatar
+      data-box
+      style={{
+        borderRadius: "100%",
+        "--avatar--size": "10rem",
+        "--box--border":
+          "clamp(2px, calc(var(--avatar--size) * .1), .5rem) solid hsl(0 0% 0% / .2)",
+        "--box--padding": "2px",
+      }}
+      src="https://placekitten.com/200/300"
+      alt="a cute kitten"
+    />
+  </Story>
+</Canvas>

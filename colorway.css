@@ -5,8 +5,9 @@
   width: var(--avatar--size);
   height: var(--avatar--size);
   object-fit: cover;
-  border: 5px solid tomato;
 }
+
+/* sample size system API */
 
 /* [data-avatar~="size:xs"] {
   --avatar--size: 20px;
@@ -24,17 +25,18 @@
   --avatar--size: 40px;
 } */
 
-/* [data-avatar] {
-  --avatar--size: 2rem;
-  --avatar--border: 0 solid white;
-  --avatar--opacity: 1;
+[data-box] {
+  /* this element should load last to override */
+  box-sizing: var(--box--box-sizing, border-box);
+  margin: var(--box--margin);
+  border: var(--box--border);
+  padding: var(--box--padding);
 
-  box-sizing: border-box;
-  display: inline-block;
-  border-radius: 50%;
-  border: var(--avatar--border);
-  opacity: var(--avatar--opacity);
-  width: var(--avatar--size);
-  height: var(--avatar--size);
-  object-fit: cover;
-} */
+  /* things that don't work */
+
+  /* border-width: var(--box--border-width, inherit);
+  border-style: var(--box--border-style, inherit);
+  border-color: var(--box--border-color, inherit); */
+
+  /* var(--box--border-width) var(--box--border-style) var(--box--border-color), */
+}
