@@ -1,3 +1,51 @@
+/* app code or theme code */
+:root {
+  /* light */
+  --surface-1of1--background-color: hsl(0 0% 100%);
+
+  --surface-1of2--background-color: hsl(0 0% 100%);
+  --surface-2of2--background-color: hsl(0 0% 70%);
+
+  --surface-1of3--background-color: hsl(0 0% 100%);
+  --surface-2of3--background-color: hsl(0 0% 70%);
+  --surface-3of3--background-color: hsl(0 0% 50%);
+
+  /* dark */
+  --surface-1of1--background-color: hsl(0 0% 0%);
+
+  --surface-1of2--background-color: hsl(0 0% 30%);
+  --surface-2of2--background-color: hsl(0 0% 0%);
+
+  --surface-1of3--background-color: hsl(0 0% 60%);
+  --surface-2of3--background-color: hsl(0 0% 30%);
+  --surface-3of3--background-color: hsl(0 0% 0%);
+
+  color: white;
+}
+
+[data-surface] {
+  box-sizing: border-box;
+
+  background-color: var(--surface-1of1--background-color);
+}
+
+[data-surface~="depth:2"] {
+  background-color: var(--surface-2of2--background-color);
+}
+[data-surface~="depth:2"] [data-surface] {
+  background-color: var(--surface-1of2--background-color);
+}
+
+[data-surface~="depth:3"] {
+  background-color: var(--surface-3of3--background-color);
+}
+[data-surface~="depth:3"] [data-surface] {
+  background-color: var(--surface-2of3--background-color);
+}
+[data-surface~="depth:3"] [data-surface] [data-surface] {
+  background-color: var(--surface-1of3--background-color);
+}
+
 [data-avatar] {
   --avatar--size: 2rem;
 

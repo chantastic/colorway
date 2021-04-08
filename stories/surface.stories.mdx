@@ -1,0 +1,80 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+import "../colorway.css";
+
+<Meta title="Surface" />
+
+# Surface
+
+## Basic
+
+<Canvas>
+  <Story name="basic: one surface">
+    <div data-surface style={{ padding: "1rem" }}>
+      <span>One surface</span>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="basic: two surface">
+    <div data-surface="depth:2" style={{ padding: "1rem" }}>
+      <div data-surface>
+        <span>Two surface</span>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="basic: three surface">
+    <div data-surface="depth:3" style={{ padding: "1rem" }}>
+      <div data-surface style={{ padding: "1rem" }}>
+        <div data-surface>
+          <span>Two surface</span>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+## Two-surface grids
+
+<Canvas>
+  <Story name="two: grid 1">
+    <div
+      data-surface="depth:2"
+      style={{
+        display: "grid",
+        gap: "1rem",
+        padding: "1rem",
+        justifyContent: "center",
+      }}
+    >
+      <main data-surface style={{ padding: "1rem" }}>
+        <span>The quick brown fox jumps over the lazy dog.</span>
+      </main>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="two: grid 2">
+    <div
+      data-surface="depth:2"
+      style={{
+        display: "grid",
+        gap: "1rem",
+        padding: "1rem",
+        gridTemplateColumns: "2fr 1fr",
+      }}
+    >
+      <main data-surface style={{ padding: "1rem" }}>
+        <span>The quick brown fox jumps over the lazy dog.</span>
+      </main>
+      <aside data-surface style={{ padding: "1rem" }}>
+        <span>Aside</span>
+      </aside>
+    </div>
+  </Story>
+</Canvas>
