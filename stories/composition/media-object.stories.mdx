@@ -1,0 +1,65 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+import "./composition-examples.css";
+import "../../colorway.css";
+
+<Meta title="Composition" />
+
+# Media
+
+<Canvas>
+  <Story name="media">
+    <div
+      style={{
+        padding: ".5rem",
+        maxWidth: "12rem",
+        border: "2px solid black",
+        background: "pink",
+        "--media--image--size": "4rem",
+      }}
+    >
+      <div data-media>
+        <img src="https://placekitten.com/200/300" alt="a cute kitten" />
+        <div>
+          <strong>Sandy Sandwiches</strong>
+          <br />
+          <span>This is the message.</span>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="media:box">
+    <div data-media data-box style={{ "--box--padding": "1rem" }}>
+      <img
+        data-avatar
+        src="https://placekitten.com/200/300"
+        alt="a cute kitten"
+      />
+      <div>
+        <strong data-heading>Sandy Sandwiches</strong>
+        <br />
+        <span data-text>This is the message.</span>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="media--image">
+    <div data-media>
+      <img
+        data-avatar
+        src="https://placekitten.com/200/300"
+        alt="a cute kitten"
+      />
+      <div>
+        <strong data-heading>Sandy Sandwiches</strong>
+        <br />
+        <span data-text>This is the message.</span>
+      </div>
+    </div>
+  </Story>
+</Canvas>

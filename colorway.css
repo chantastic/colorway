@@ -11,16 +11,16 @@
   --surface-3of3--background-color: hsl(0 0% 50%);
 
   /* dark */
-  --surface-1of1--background-color: hsl(0 0% 0%);
+  /* --surface-1of1--background-color: hsl(0 0% 0%);
 
   --surface-1of2--background-color: hsl(0 0% 30%);
   --surface-2of2--background-color: hsl(0 0% 0%);
 
   --surface-1of3--background-color: hsl(0 0% 60%);
   --surface-2of3--background-color: hsl(0 0% 30%);
-  --surface-3of3--background-color: hsl(0 0% 0%);
+  --surface-3of3--background-color: hsl(0 0% 0%); */
 
-  color: white;
+  /* color: white; */
 }
 
 [data-surface] {
@@ -72,6 +72,16 @@
 [data-avatar~="size:lg"] {
   --avatar--size: 40px;
 } */
+
+[data-heading] {
+  color: var(--heading--color);
+  font-size: var(--heading--font-size);
+}
+
+[data-text] {
+  color: var(--text--color);
+  font-size: var(--text--font-size);
+}
 
 [data-box] {
   /* this element should load last to override */

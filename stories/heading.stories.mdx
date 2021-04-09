@@ -1,0 +1,31 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+import "../colorway.css";
+
+<Meta title="Heading" />
+
+<Canvas>
+  <Story name="default">
+    <>
+      <h1 data-heading>heading l1</h1>
+      <h2 data-heading>heading l2</h2>
+      <h3 data-heading>heading l3</h3>
+      <h4 data-heading>heading l4</h4>
+      <h5 data-heading>heading l5</h5>
+      <h6 data-heading>heading l6</h6>
+    </>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="color">
+    <>
+      <h1 data-heading style={{ "--heading--color": "purple" }}>
+        heading l1
+      </h1>
+      <h2 data-heading style={{ "--heading--color": "green" }}>
+        heading l2
+      </h2>
+    </>
+  </Story>
+</Canvas>

@@ -1,0 +1,19 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+import "../colorway.css";
+
+<Meta title="Text" />
+
+<Canvas>
+  <Story name="default">
+    <span data-text>some text</span>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="custom property">
+    <span data-text style={{ "--text--color": "purple" }}>
+      some text
+    </span>
+  </Story>
+</Canvas>
