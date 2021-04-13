@@ -1,37 +1,16 @@
 [data-media] {
-  /* we want to use this as a shared value. */
-  /* but if we declair a value for --media--image--size here, it can't be overridden from a parent. */
-  /* that's why all single use variables are written inline. */
-  --media--image--size--fallback: 2rem;
-
   display: grid;
-  grid-template: var(
-    --media--grid-template,
-    "image content" auto /
-      var(--media--image--size, var(--media--image--size--fallback)) auto
-  );
-
+  grid-template: var(--media--grid-template, "image content" auto / auto 1fr);
   gap: var(--media--gap, 0.5rem);
-}
 
-/* fallbock */
-[data-media] > img {
-  width: 100%;
+  --media--image--size: 2rem;
 }
 
 [data-media--image] {
   grid-area: image;
   align-self: var(--media--image--align-self, start);
-
-  --avatar--size: var(
-    --media--image--size,
-    var(--media--image--size--fallback)
-  );
 }
 
 [data-media--content] {
   grid-area: content;
-
-  --heading--color: purple;
-  --text--color: gold;
 }

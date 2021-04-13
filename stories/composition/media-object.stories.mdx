@@ -10,22 +10,81 @@ import "../../colorway.css";
 <Canvas>
   <Story name="media">
     <div
+      data-box
       style={{
-        padding: ".5rem",
-        maxWidth: "12rem",
-        border: "2px solid black",
-        background: "pink",
-        "--media--image--size": "4rem",
+        display: "grid",
+        gap: "1rem",
+        maxWidth: "320px",
+        backgroundColor: "pink",
+        "--box--border": "2px solid black",
+        "--box--padding": "1rem",
+        "--media--gap": "1rem",
       }}
     >
       <div data-media>
-        <img src="https://placekitten.com/200/300" alt="a cute kitten" />
+        <img
+          data-avatar
+          style={{ "--avatar--size": "3rem", borderRadius: "100%" }}
+          src="https://placekitten.com/200/300"
+          alt="a cute kitten"
+        />
         <div>
           <strong>Sandy Sandwiches</strong>
           <br />
           <span>This is the message.</span>
         </div>
       </div>
+      <div>
+        <div data-media>
+          <img
+            data-avatar
+            style={{ "--avatar--size": "3rem", borderRadius: "100%" }}
+            src="https://placekitten.com/200/300"
+            alt="a cute kitten"
+          />
+          <div>
+            <strong>Sandy Sandwiches</strong>
+            <br />
+            <span>This is the message.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="media — grid-areas">
+    <div
+      data-media
+      data-box
+      style={{
+        display: "grid",
+        gap: "1rem",
+        maxWidth: "320px",
+        backgroundColor: "pink",
+        "--box--border": "2px solid black",
+        "--box--padding": "1rem",
+        "--media--gap": "1rem",
+        "--media--image--align-self": "end",
+      }}
+    >
+      <div data-media--content>
+        <strong data-heading>Sandy Sandwiches</strong>
+        <br />
+        <span data-text>This is the message.</span>
+        <span data-text>This is the message.</span>
+        <span data-text>This is the message.</span>
+        <span data-text>This is the message.</span>
+        <span data-text>This is the message.</span>
+        <span data-text>This is the message.</span>
+      </div>
+      <img
+        data-media--image
+        data-avatar
+        src="https://placekitten.com/200/300"
+        alt="a cute kitten"
+      />
     </div>
   </Story>
 </Canvas>
