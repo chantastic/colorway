@@ -78,9 +78,38 @@
   font-size: var(--heading--font-size);
 }
 
+[data-typographic-scale="minor-third"] h6[data-heading] {
+  --heading--font-size: 0.79rem;
+}
+[data-typographic-scale="minor-third"] h5[data-heading] {
+  --heading--font-size: 0.899rem;
+}
+[data-typographic-scale="minor-third"] h4[data-heading] {
+  --heading--font-size: 1rem;
+}
+[data-typographic-scale="minor-third"] h3[data-heading] {
+  --heading--font-size: 1.25rem;
+}
+[data-typographic-scale="minor-third"] h2[data-heading] {
+  --heading--font-size: 1.266rem;
+}
+[data-typographic-scale="minor-third"] h1[data-heading] {
+  --heading--font-size: 1.424rem;
+}
+
 [data-text] {
   color: var(--text--color);
   font-size: var(--text--font-size);
+}
+
+[data-typographic-scale="minor-third"] [data-text="font-size:large"] {
+  --text--font-size: 1.25rem;
+}
+[data-typographic-scale="minor-third"] [data-text="font-size:medium"] {
+  --text--font-size: 1rem;
+}
+[data-typographic-scale="minor-third"] [data-text="font-size:small"] {
+  --text--font-size: 0.889rem;
 }
 
 [data-box] {
