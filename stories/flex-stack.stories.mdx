@@ -1,0 +1,38 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+import "../colorway.css";
+
+<Meta title="Flex" />
+
+# Flex
+
+<Canvas>
+  <Story name="data-flex">
+    <div data-flex>
+      <div style={{ fontSize: "x-large" }}>Item 1</div>
+      <div style={{ fontSize: "x-small" }}>Item 1</div>
+      <div>Item 3</div>
+    </div>
+  </Story>
+</Canvas>
+
+# Flex Stack
+
+<Canvas>
+  <Story name="data-flex-stack">
+    <div>
+      <div
+        data-flex
+        data-flex-stack
+        style={{
+          backgroundColor: "pink",
+          minHeight: "10rem",
+        }}
+      >
+        <div style={{ fontSize: "x-large" }}>Item 1</div>
+        <div style={{ fontSize: "x-small" }}>Item 1</div>
+        <div>Item 3</div>
+      </div>
+    </div>
+  </Story>
+</Canvas>
